@@ -7,25 +7,57 @@ This project explores customer purchase patterns, menu pricing, and membership t
 Dataset Structure
 
 Sales Table: Tracks each customer's order, including the product purchased and the date of purchase.
+
 Menu Table: Contains details of the restaurant’s menu items and their prices.
+
 Members Table: Tracks the customers who have joined the restaurant's membership program along with their join dates.
 
-Key Features
 
-Analyze customer purchase patterns over time.
-Compare the frequency of product purchases.
-Assess the impact of membership on purchasing behavior.
-SQL Queries and Analysis
+## Setup Instructions
+1. Create the database and switch to it:
+   ```sql
+   CREATE DATABASE restaurant;
+   USE restaurant;
+   ```
+   
+2. Run the provided SQL scripts to create tables and insert sample data.
 
-The repository contains SQL queries for:
-Identifying the most popular menu items.
-Analyzing purchase trends before and after joining the membership program.
-Calculating total sales revenue and customer lifetime value.
+## Analytical Queries
+The project includes several analytical queries that answer specific business questions:
 
-Tools Used
-Mysql
-Relational Database
+1. Total amount spent by each customer
 
-Future Enhancements
-Integrating more advanced data analysis techniques (e.g., customer segmentation).
-Visualizing key metrics using data visualization tools like Power BI.
+2 Number of days each customer visited the restaurant
+ 
+3. First item purchased by each customer
+  
+4. Most purchased item on the menu
+  
+5. Most popular item for each customer
+   
+6. First item purchased by customers after becoming members
+ 
+7. Item purchased just before customers became members
+ 
+8. Total items and amount spent by each member before joining
+ 
+9. Customer points calculation (with special rules for sushi)
+ 
+10. Points calculation for the first week of membership (with bonus points)
+    
+
+## How to Use
+
+1. Set up the database and tables using the provided SQL scripts.
+   
+2. Run each analytical query separately to get insights into different aspects of the restaurant's sales and customer behavior.
+
+## Notes
+- Ensure you have MySQL installed and running on your system.
+- Adjust date ranges in queries if analyzing data beyond January 2021.
+- Some queries use advanced SQL features like window functions and CTEs.
+
+## Future Improvements
+- Add more data for a broader analysis
+- Create visualizations based on the query results
+- Implement a scheduling system to run these analyses periodically
